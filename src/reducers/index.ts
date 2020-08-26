@@ -2,11 +2,13 @@ import { combineReducers } from 'redux'
 import changeCounterReducer from './changeCounterReducer'
 
 export interface State {
-  changeCounterReducer: {
+  counter: {
     count: number
   }
 }
 
-const rootReducers = combineReducers({changeCounterReducer})
+const rootReducers = combineReducers({
+  counter: changeCounterReducer
+})
 
 export default rootReducers

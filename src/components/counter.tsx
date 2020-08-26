@@ -12,7 +12,6 @@ interface Props {
 }
 
 const Counter: React.FC<Props> = ({ count, incrementCount, decrementCount }) => {
-  console.log(count)
   return(
     <div>
       <code>{count}</code>
@@ -23,7 +22,7 @@ const Counter: React.FC<Props> = ({ count, incrementCount, decrementCount }) => 
 }
 
 const mapStateToProps = (state: State) => {
-  return {count: state.changeCounterReducer.count}
+  return {count: state.counter.count}
 }
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
